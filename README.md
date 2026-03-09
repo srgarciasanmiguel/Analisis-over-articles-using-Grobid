@@ -13,11 +13,9 @@ The pipeline performs:
 
 ## Data
 
-10 open-access papers were downloaded from:
+11 open-access papers were downloaded from:
 
-- arXiv
-- PubMed Central
-- ACL Anthology
+- doaj.org
 
 ## Pipeline
 
@@ -36,7 +34,7 @@ conda activate grobid-analysis
 
 ### Run Grobid
 
-docker run -t --rm -p 8070:8070 lfoppiano/grobid
+docker run -t --rm -p 8070:8070 8070:8070 grobid/grobid:0.8.2-crf
 
 ### Run Scripts
 

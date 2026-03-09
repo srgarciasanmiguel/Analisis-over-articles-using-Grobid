@@ -3,13 +3,13 @@ version: "3"
 services:
 
   grobid:
-    image: lfoppiano/grobid:latest
+    image: grobid/grobid:0.8.2-crf
     ports:
       - "8070:8070"
 
-  analysis:
+  grobid-analysis:
     build: .
     volumes:
-      - .:/app
+      - .:/Analisis-over-articles-using-Grobid
     depends_on:
       - grobid

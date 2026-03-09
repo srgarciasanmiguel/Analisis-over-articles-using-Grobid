@@ -5,8 +5,8 @@ import os
 
 abstracts = ""
 
-for file in os.listdir("../data/xml"):
-    with open(f"../data/mxl/{file}") as f:
+for file in os.listdir("data/xml"):
+    with open(f"data/xml/{file}") as f:
         soup = BeautifulSoup(f, "xml")
         abs_tag = soup.find("abstract")
 
@@ -18,4 +18,4 @@ wc.generate(abstracts)
 
 plt.imshow(wc)
 plt.axis("off")
-plt.savefig("../results/wordcloud.png")
+plt.savefig("results/wordcloud.png")
