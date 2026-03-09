@@ -1,0 +1,9 @@
+name: grobid-analysis
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+    - requests
+    - beautifulsoup4
+    - matplotlib
+    - wordcloud

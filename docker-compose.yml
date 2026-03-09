@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+
+  grobid:
+    image: lfoppiano/grobid:latest
+    ports:
+      - "8070:8070"
+
+  analysis:
+    build: .
+    volumes:
+      - .:/app
+    depends_on:
+      - grobid
