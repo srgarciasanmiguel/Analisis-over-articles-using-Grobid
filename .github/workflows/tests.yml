@@ -52,7 +52,7 @@ jobs:
         run: |
           echo "Waiting for GROBID..."
           for i in $(seq 1 30); do
-            STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8070/api/isalive)
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8070/api/isalive || true)
             if [ "$STATUS" = "200" ]; then
               echo "GROBID is up after $i attempts!"
               exit 0
