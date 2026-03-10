@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.9","3.10", "3.11", "3.12"]
+        python-version: ["3.10", "3.11", "3.12"]
     steps:
       - uses: actions/checkout@v4
 
@@ -34,7 +34,7 @@ jobs:
 
     services:
       grobid:
-        image: grobid/grobid:0.8.0-crf
+        image: grobid/grobid:0.8.2-crf
         ports:
           - 8070:8070
 

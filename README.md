@@ -4,6 +4,15 @@
 
 This project analyzes open-access research papers using Grobid to extract structured information from PDFs.
 
+Developed on python 3.12.3
+
+Working versions:
+
+- 3.12
+- 3.11
+- 3.10
+- it does not work on 3.9
+
 The pipeline performs:
 
 - Abstract extraction
