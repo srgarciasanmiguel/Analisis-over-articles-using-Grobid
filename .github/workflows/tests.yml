@@ -45,6 +45,10 @@ jobs:
         with:
           python-version: "3.12.3"
 
+      - name: Check GROBID container logs
+        if: always()
+        run: docker logs $(docker ps -aq --filter "ancestor=lfoppiano/grobid:0.8.0")
+        
       - name: Install dependencies
         run: pip install -r requirements.txt pytest
 
