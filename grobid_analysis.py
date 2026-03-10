@@ -314,7 +314,7 @@ def main(pdf_dir: str, grobid_url: str) -> None:
         fig_count = extract_figure_count(soup)
         links = extract_links(soup)
 
-        print(f"       Title    : {title[:70]}")
+        print(f"       Title    : {title[:75]}")
         print(f"       Abstract : {len(abstract)} chars")
         print(f"       Figures  : {fig_count}")
         print(f"       Links    : {len(links)}")

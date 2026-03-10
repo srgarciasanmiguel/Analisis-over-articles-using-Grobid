@@ -44,6 +44,7 @@ The pipeline performs:
 ### Environment Setup
 
 conda env create -f environment.yml
+
 conda activate grobid-analysis
 
 ### Run Grobid
@@ -57,4 +58,5 @@ python3 script/grobid_analisis.py
 ## Docker Installation
 
 docker compose up --build
+
 docker compose run --rm grobid_analysis
