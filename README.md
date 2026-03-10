@@ -2,6 +2,8 @@
 
 [![DOI](https://zenodo.org/badge/1172867391.svg)](https://doi.org/10.5281/zenodo.18931883)
 
+[![Tests](https://github.com/srgarciasanmiguel/Analisis-over-articles-using-Grobid/actions/workflows/tests.yml/badge.svg)](https://github.com/srgarciasanmiguel/Analisis-over-articles-using-Grobid/actions/workflows/tests.yml)
+
 ## Index
 
 1. [Overview](#overview)
