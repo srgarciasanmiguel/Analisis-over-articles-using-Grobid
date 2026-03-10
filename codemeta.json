@@ -1,0 +1,49 @@
+{
+    "@context": "https://w3id.org/codemeta/3.0",
+    "applicationCategory": "SoftwareSourceCode",
+    "author": [
+        {
+            "@id": "https://github.com/srgarciasanmiguel",
+            "@type": "Person"
+        }
+    ],
+    "codeRepository": "https://github.com/srgarciasanmiguel/Analisis-over-articles-using-Grobid",
+    "dateCreated": "2026-03-04",
+    "dateModified": "2026-03-10",
+    "description": "Performs an analysis over articles using Grobid ",
+    "downloadUrl": "https://github.com/srgarciasanmiguel/Analisis-over-articles-using-Grobid/releases",
+    "identifier": "https://doi.org/10.5281/zenodo.18931883",
+    "license": "https://spdx.org/licenses/CC-BY-SA-4.0",
+    "name": "Analisis-over-articles-using-Grobid",
+    "operatingSystem": "Linux",
+    "programmingLanguage": "Python",
+    "referencePublication": [
+        {
+            "author": [
+                {
+                    "familyName": "Rodríguez García San Miguel",
+                    "givenName": "Santiago",
+                    "@type": "Person"
+                }
+            ],
+            "datePublished": "2026",
+            "identifier": "10.5281/zenodo.18931883",
+            "name": "If you use this software, please cite it.",
+            "url": "https://doi.org/10.5281/zenodo.18931883",
+            "@type": "ScholarlyArticle"
+        }
+    ],
+    "softwareRequirements": [
+        "requests",
+        "wordcloud",
+        "matplotlib",
+        "lxml",
+        "beautifulsoup4"
+    ],
+    "codemeta:contIntegration": {
+        "@id": "https://raw.githubusercontent.com/srgarciasanmiguel/Analisis-over-articles-using-Grobid/main/.github/workflows/tests.yml"
+    },
+    "continuousIntegration": "https://raw.githubusercontent.com/srgarciasanmiguel/Analisis-over-articles-using-Grobid/main/.github/workflows/tests.yml",
+    "issueTracker": "https://github.com/srgarciasanmiguel/Analisis-over-articles-using-Grobid/issues",
+    "@type": "SoftwareSourceCode"
+}
