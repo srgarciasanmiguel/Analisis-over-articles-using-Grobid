@@ -1,8 +1,10 @@
 # Analisis-over-articles-using-Grobid
 
+[![DOI](https://zenodo.org/badge/1172867391.svg)](https://doi.org/10.5281/zenodo.18931883)
+
 ## Overview
 
-This project analyzes open-access research papers using Grobid to extract structured information from PDFs.
+This project analyzes research papers using Grobid to extract structured information from PDFs.
 
 Developed on python 3.12.3
 
