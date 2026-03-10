@@ -47,8 +47,8 @@ jobs:
 
       - name: Check GROBID container logs
         if: always()
-        run: docker logs $(docker ps -aq --filter "ancestor=lfoppiano/grobid:0.8.0")
-        
+        run: docker logs $(docker ps -aq --filter "ancestor=grobid/grobid:0.8.2-crf")
+
       - name: Install dependencies
         run: pip install -r requirements.txt pytest
 
