@@ -19,7 +19,7 @@ services:
       grobid:
         condition: service_healthy
     volumes:
-      - ./data:/app/data
-      - ./results:/app/results
+      - ./docs/data:/app/data
+      - ./docs/results:/app/results
     environment:
       - PYTHONUNBUFFERED=1

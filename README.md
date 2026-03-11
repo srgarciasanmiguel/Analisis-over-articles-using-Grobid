@@ -85,7 +85,7 @@ Go to the project directory:
 cd Analysis-over-articles-using-Grobid
 ```
 
-Copy the PDF files of the papers to analize in the `/data` folder
+Copy the PDF files of the papers to analize in the `docs/data` folder
 
 > ⚠️ There are already 13 papers there, the ones listed in [data](#data), that were used for developing and testing the system. Remove them before using.
 
@@ -107,7 +107,7 @@ docker run --rm -p 8070:8070 grobid/grobid:0.8.2-crf
 
 Run script
 ```
-python3 script/grobid_analisis.py
+python3 src/grobid_analisis.py
 ```
 
 ### Docker Setup
@@ -127,15 +127,15 @@ docker compose run --rm grobid_analysis
 
 ## Output
 
-The program generates three files in the folder `/results` that will be created if it has not been yet:
+The program generates three files in the folder `docs/results` that will be created if it has not been yet:
 
 1. figures_per_article.png
 2. links_report.txt
 3. wordcloud.png
 
-![wordcloud_example](image.png)
+![wordcloud_example](/docs/resources/wordcloud_example.png)
 
-![figures_per_article_example](image-1.png)
+![figures_per_article_example](/docs/resources/figures_per_article_example.png)
 
 ## Validation
 

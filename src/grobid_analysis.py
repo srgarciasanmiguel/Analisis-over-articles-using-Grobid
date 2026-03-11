@@ -39,8 +39,8 @@ from bs4 import BeautifulSoup
 # Configuration defaults
 # ─────────────────────────────────────────────
 DEFAULT_GROBID_URL = "http://localhost:8070"
-DEFAULT_PDF_DIR = "./data"
-OUTPUT_DIR = "./results"
+DEFAULT_PDF_DIR = "./docs/data"
+DEFAULT_OUTPUT_DIR = "./docs/results"
 
 TEI_NS = "http://www.tei-c.org/ns/1.0"
 
@@ -276,8 +276,8 @@ def shorten_title(title: str, max_len: int = 50) -> str:
     return title if len(title) <= max_len else title[:max_len].rstrip() + "…"
 
 
-def main(pdf_dir: str, grobid_url: str) -> None:
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
+def main(pdf_dir: str, grobid_url: str, o_dir: str) -> None:
+    os.makedirs(o_dir, exist_ok=True)
 
     pdf_files = sorted(
         glob.glob(os.path.join(pdf_dir, "**", "*.pdf"), recursive=True)
@@ -293,7 +293,7 @@ def main(pdf_dir: str, grobid_url: str) -> None:
     print(f"\n{'='*60}")
     print(f"  GROBID Paper analizer  –  {len(pdf_files)} PDF(s) found")
     print(f"  GROBID endpoint : {grobid_url}")
-    print(f"  Output folder   : {os.path.abspath(OUTPUT_DIR)}")
+    print(f"  Output folder   : {os.path.abspath(o_dir)}")
     print(f"{'='*60}\n")
 
     all_abstract_text = []
@@ -342,19 +342,19 @@ def main(pdf_dir: str, grobid_url: str) -> None:
     # 1. Word cloud
     build_wordcloud(
         " ".join(all_abstract_text),
-        os.path.join(OUTPUT_DIR, "wordcloud.png"),
+        os.path.join(o_dir, "wordcloud.png"),
     )
 
     # 2. Figure count chart
     build_figure_chart(
         paper_data,
-        os.path.join(OUTPUT_DIR, "figures_per_article.png"),
+        os.path.join(o_dir, "figures_per_article.png"),
     )
 
     # 3. Links report
     build_links_report(
         paper_data,
-        os.path.join(OUTPUT_DIR, "links_report.txt"),
+        os.path.join(o_dir, "links_report.txt"),
     )
 
     # 4. Quick console summary
@@ -367,7 +367,7 @@ def main(pdf_dir: str, grobid_url: str) -> None:
         print(f"      Links   : {len(d['links'])}")
         print(f"      Abstract: {len(d['abstract'])} chars")
     print(f"{'='*60}")
-    print(f"\n  All outputs saved in: {os.path.abspath(OUTPUT_DIR)}/\n")
+    print(f"\n  All outputs saved in: {os.path.abspath(o_dir)}/\n")
 
 
 # ─────────────────────────────────────────────
@@ -385,9 +385,14 @@ if __name__ == "__main__":
         help="Directory containing the PDF papers to analize",
     )
     parser.add_argument(
+        "--o_dir",
+        default=DEFAULT_OUTPUT_DIR,
+        help="Directory  to analize",
+    )
+    parser.add_argument(
         "--grobid_url",
         default=DEFAULT_GROBID_URL,
         help="Base URL of the running GROBID instance",
     )
     args = parser.parse_args()
-    main(args.pdf_dir, args.grobid_url)
+    main(args.pdf_dir, args.grobid_url, args.o_dir)

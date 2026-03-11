@@ -7,14 +7,14 @@
             "@type": "Person"
         }
     ],
-    "codeRepository": "https://github.com/srgarciasanmiguel/Analisis-over-articles-using-Grobid",
+    "codeRepository": "https://github.com/srgarciasanmiguel/Analysis-over-articles-using-Grobid",
     "dateCreated": "2026-03-04",
     "dateModified": "2026-03-10",
     "description": "Performs an analysis over articles using Grobid ",
-    "downloadUrl": "https://github.com/srgarciasanmiguel/Analisis-over-articles-using-Grobid/releases",
+    "downloadUrl": "https://github.com/srgarciasanmiguel/Analysis-over-articles-using-Grobid/releases",
     "identifier": "https://doi.org/10.5281/zenodo.18931883",
     "license": "https://spdx.org/licenses/CC-BY-SA-4.0",
-    "name": "Analisis-over-articles-using-Grobid",
+    "name": "Analysis-over-articles-using-Grobid",
     "operatingSystem": "Linux",
     "programmingLanguage": "Python",
     "referencePublication": [
@@ -41,9 +41,9 @@
         "beautifulsoup4"
     ],
     "codemeta:contIntegration": {
-        "@id": "https://raw.githubusercontent.com/srgarciasanmiguel/Analisis-over-articles-using-Grobid/main/.github/workflows/tests.yml"
+        "@id": "https://raw.githubusercontent.com/srgarciasanmiguel/Analysis-over-articles-using-Grobid/main/.github/workflows/tests.yml"
     },
-    "continuousIntegration": "https://raw.githubusercontent.com/srgarciasanmiguel/Analisis-over-articles-using-Grobid/main/.github/workflows/tests.yml",
-    "issueTracker": "https://github.com/srgarciasanmiguel/Analisis-over-articles-using-Grobid/issues",
+    "continuousIntegration": "https://raw.githubusercontent.com/srgarciasanmiguel/Analysis-over-articles-using-Grobid/main/.github/workflows/tests.yml",
+    "issueTracker": "https://github.com/srgarciasanmiguel/Analysis-over-articles-using-Grobid/issues",
     "@type": "SoftwareSourceCode"
 }
